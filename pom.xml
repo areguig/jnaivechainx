@@ -5,8 +5,8 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.vertx.starter</groupId>
-  <artifactId>vertx-start-project</artifactId>
+  <groupId>io.areguig</groupId>
+  <artifactId>jnaivechainx</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
@@ -41,7 +41,12 @@
       <version>1.16.16</version>
       <scope>provided</scope>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.4</version>
+    </dependency>
 
 
     <dependency>

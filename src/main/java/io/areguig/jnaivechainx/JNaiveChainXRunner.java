@@ -17,11 +17,14 @@ public class JNaiveChainXRunner {
 
     val ulysse = new JsonObject().put("http.port", 8002).put("node.name", "Ulysse");
 
-    Arrays.asList(hercule,ulysse).forEach(v -> vertx.deployVerticle(JNaiveChainXNodeVerticle.class.getName(), new DeploymentOptions().setConfig(v), res -> {
+    val eros = new JsonObject().put("http.port", 8003).put("node.name", "Eros");
+
+    Arrays.asList(hercule,ulysse,eros).forEach(v -> vertx.deployVerticle(JNaiveChainXNodeVerticle.class.getName(), new DeploymentOptions().setConfig(v), res -> {
       if (res.succeeded()) {
         System.out.println("Deployment id is: " + res.result());
       } else {
-        System.out.println("Deployment failed!"+ res.cause().getStackTrace());
+        System.out.println("Deployment failed!"+ res.cause());
+        res.cause().printStackTrace();
       }
     }));
 
