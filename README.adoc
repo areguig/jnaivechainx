@@ -1,3 +1,20 @@
 ## JnaivechainX
 
-# :warning: This repo is a work in progress :warning:
+Implementation in java of a naive blockchain using vert.x
+A blockchain node is a _verticle_ that exposes an API to add a block or get the blockchain.
+The nodes communicate through the vert.x _event bus_ to sync their local copy of the blockchain.  
+
+### Requirement : 
+Java 8 
+Maven 3 
+
+### Build it 
+    mvn clean package
+    
+### Run it 
+    java -jar target/jnaivechainx-1.0-SNAPSHOT-fat.jar
+
+or you can run the main class [JNaiveChainXRunner](https://github.com/areguig/jnaivechainx/blob/master/src/main/java/io/areguig/jnaivechainx/JNaiveChainXRunner.java)
+
+
+
